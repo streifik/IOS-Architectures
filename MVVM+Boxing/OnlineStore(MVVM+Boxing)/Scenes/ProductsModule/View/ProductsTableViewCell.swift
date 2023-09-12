@@ -20,7 +20,7 @@ class ProductsTableViewCell: UITableViewCell {
     
     func configure(product: Product) {
         titleLabel.text = product.title
-        priceLabel.text = "Price: \(product.price)"
+        priceLabel.text = "Price: \(product.price)$"
         productsImageView.imageFromURL(urlString: product.image)
         
         containerView.layer.cornerRadius = 20

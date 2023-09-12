@@ -39,7 +39,7 @@ class ProductDetailViewController: UIViewController {
         
         if let product = viewModel.selectedProduct {
             productLabel.text = product.title
-            priceLabel.text = String(product.price)
+            priceLabel.text = "\(product.price)$"
             descriptionLabel.text = product.description
             productImageView.imageFromURL(urlString: product.image)
             

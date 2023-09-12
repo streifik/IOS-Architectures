@@ -24,7 +24,7 @@ class ProductsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
         getProducts()
         bindViewModel()
         setUpUI()
