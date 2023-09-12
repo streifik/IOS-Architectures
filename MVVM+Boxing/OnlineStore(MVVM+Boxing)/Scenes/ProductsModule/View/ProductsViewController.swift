@@ -32,12 +32,12 @@ class ProductsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "Products"
+        navigationItem.title = "Products"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        title = ""
+        navigationItem.title = ""
     }
     
     // MARK: Methods

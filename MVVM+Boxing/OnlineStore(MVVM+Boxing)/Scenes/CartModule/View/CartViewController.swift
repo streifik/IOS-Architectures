@@ -24,7 +24,7 @@ class CartViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         viewModel.getCartProducts()
         bindViewModel()
-        title = "Cart"
+        navigationItem.title = "Cart"
    
         switch viewModel.cartProducts.value {
         case .success(let products):
@@ -41,7 +41,7 @@ class CartViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        title = ""
+        navigationItem.title = ""
     }
     
     // MARK: Methods

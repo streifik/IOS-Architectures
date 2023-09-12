@@ -21,6 +21,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var quantityStackView: UIStackView!
     @IBOutlet weak var addToCartStackView: UIStackView!
     
+    @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
     // MARK: Variables
     
     var viewModel = ProductDetailViewModel()
@@ -32,8 +33,10 @@ class ProductDetailViewController: UIViewController {
         
         if viewModel.isAddToCartButtonHidden {
             addToCartStackView.isHidden = true
+            scrollViewBottomConstraint.constant = 0
         } else {
             addToCartStackView.isHidden = false
+            scrollViewBottomConstraint.constant = 125
         }
         bindViewModel()
         
