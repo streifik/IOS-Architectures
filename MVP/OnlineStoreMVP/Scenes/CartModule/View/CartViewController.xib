@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartViewController" customModule="OnlineStoreMVP" customModuleProvider="target">
+            <connections>
+                <outlet property="cartTableView" destination="gyh-tA-XE1" id="ncm-uW-X7E"/>
+                <outlet property="messageLabel" destination="swx-KY-dbj" id="JVz-V8-Ozd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gyh-tA-XE1">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="7Bw-It-MGa"/>
+                        <outlet property="delegate" destination="-1" id="8dM-Y5-tqE"/>
+                    </connections>
+                </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swx-KY-dbj">
+                    <rect key="frame" x="111.66666666666669" y="406" width="170" height="45"/>
+                    <color key="backgroundColor" systemColor="systemGray3Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="8Da-j0-UEC"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="V2z-s0-s96"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="swx-KY-dbj" firstAttribute="top" secondItem="gyh-tA-XE1" secondAttribute="bottom" constant="-446" id="1OY-Nd-eNk"/>
+                <constraint firstItem="gyh-tA-XE1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6zB-SS-aax"/>
+                <constraint firstItem="swx-KY-dbj" firstAttribute="centerX" secondItem="gyh-tA-XE1" secondAttribute="centerX" id="JRA-i4-9eb"/>
+                <constraint firstItem="gyh-tA-XE1" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mm5-1P-VD3"/>
+                <constraint firstAttribute="bottom" secondItem="gyh-tA-XE1" secondAttribute="bottom" id="nje-Kl-8Mp"/>
+                <constraint firstItem="gyh-tA-XE1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oEa-Qx-a6E"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="-1.4084507042253522"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
