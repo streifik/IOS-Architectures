@@ -78,15 +78,15 @@ class CartViewController: UIViewController {
         label.font = .systemFont(ofSize: 15, weight: .regular)
         label.textAlignment = .center
         label.layer.masksToBounds = true
-        label.layer.cornerRadius = 5
+        label.layer.cornerRadius = 10
         label.textColor = .white
-        label.backgroundColor = .lightGray.withAlphaComponent(0.7)
+        label.backgroundColor = .systemGray3
         
         view.addSubview(label)
         
         NSLayoutConstraint.activate([
-            label.widthAnchor.constraint(equalToConstant: 150),
-            label.heightAnchor.constraint(equalToConstant: 40),
+            label.widthAnchor.constraint(equalToConstant: 170),
+            label.heightAnchor.constraint(equalToConstant: 45),
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
@@ -110,8 +110,8 @@ class CartViewController: UIViewController {
     
     func setUpConstraints() {
         NSLayoutConstraint.activate([
-            messageLabel.widthAnchor.constraint(equalToConstant: 150),
-            messageLabel.heightAnchor.constraint(equalToConstant: 40),
+            messageLabel.widthAnchor.constraint(equalToConstant: 170),
+            messageLabel.heightAnchor.constraint(equalToConstant: 45),
             messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             messageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
