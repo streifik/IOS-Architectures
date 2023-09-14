@@ -77,7 +77,9 @@ class AppCoordinator: Coordinator {
    
         // Get the currently selected view controller from the tab bar controller
         if let selectedViewController = tabBarController.selectedViewController as? UINavigationController {
+        
             // Push the detail view controller onto the navigation stack of the currently selected tab
+     
             selectedViewController.pushViewController(detailViewController, animated: true)
         }
     }

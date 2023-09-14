@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarController = UITabBarController()
         let navigationController = UINavigationController()
+        
        // tabBarController.viewControllers = [navigationController]
         
         appCoordinator = AppCoordinator(navigationController: navigationController, tabBarController: tabBarController)

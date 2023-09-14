@@ -48,6 +48,7 @@ class ProductDetailViewController: UIViewController {
             
             getCartProductQuantity(product: product)
         }
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: max(view.bounds.height + 1, view.frame.size.height))
     }
     
     override func viewWillAppear(_ animated: Bool) {

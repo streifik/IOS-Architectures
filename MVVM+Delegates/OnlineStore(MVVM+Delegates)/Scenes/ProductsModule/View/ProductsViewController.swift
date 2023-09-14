@@ -51,7 +51,6 @@ class ProductsViewController: UIViewController {
         view.backgroundColor = .secondarySystemBackground
         productsTableView.register(ProductsTableViewCell.self, forCellReuseIdentifier: "ProductCell")
         productsTableView.register(CustomHeaderView.self, forHeaderFooterViewReuseIdentifier: "customHeader")
-        configureScrollEdgeAppearance()
         productsTableView.delegate = self
         productsTableView.dataSource = self
         productsTableView.backgroundColor = .secondarySystemBackground
@@ -66,20 +65,6 @@ class ProductsViewController: UIViewController {
         productsTableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
         productsTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         productsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-    }
-    
-    func configureScrollEdgeAppearance() {
-        if #available(iOS 15, *) {
-            guard let navigationBar = navigationController?.navigationBar else { return }
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor.secondarySystemBackground
-            appearance.shadowColor = .clear
-            appearance.shadowImage = UIImage()
-            
-            navigationBar.standardAppearance = appearance
-            navigationBar.scrollEdgeAppearance = navigationBar.standardAppearance
-        }
     }
     
     func addMenuItems() -> UIMenu {

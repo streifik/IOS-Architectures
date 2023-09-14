@@ -130,13 +130,7 @@ class ProductDetailViewController: UIViewController {
         getCartProductQuantity(product: viewModel.selectedProduct)
         viewModel.productDetailViewModelDelegate = self
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        scrollView.contentSize = contentView.frame.size
-    }
-    
+   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -221,6 +215,8 @@ class ProductDetailViewController: UIViewController {
         quantityStackView.addArrangedSubview(decreaseQuantityButton)
         addToCartStackView.addArrangedSubview(addToCartButton)
         addToCartStackView.addArrangedSubview(quantityStackView)
+        
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: max(view.bounds.height + 1, contentView.frame.size.height))
         
         if let product = viewModel.selectedProduct {
             titleLabel.text = product.title

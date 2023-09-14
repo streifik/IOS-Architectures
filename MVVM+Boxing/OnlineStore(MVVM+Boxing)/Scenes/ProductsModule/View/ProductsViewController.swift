@@ -24,7 +24,7 @@ class ProductsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         getProducts()
         bindViewModel()
         setUpUI()
@@ -85,10 +85,10 @@ class ProductsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         productsTableView.separatorStyle = .none
         productsTableView.sectionHeaderTopPadding = 0.0
-        configureScrollEdgeAppearance()
         productsTableView.sectionFooterHeight = UITableView.automaticDimension
         productsTableView.estimatedSectionHeaderHeight = 44
         productsTableView.register(UINib(nibName: "ProductsHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ProductsHeaderView")
+        
     }
     
     func hideActivityIndicator() {
@@ -123,20 +123,6 @@ class ProductsViewController: UIViewController {
         })
         
         return menuItems
-    }
-    
-    func configureScrollEdgeAppearance() {
-        if #available(iOS 15, *) {
-            guard let navigationBar = navigationController?.navigationBar else { return }
-            
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor.secondarySystemBackground
-            appearance.shadowColor = .clear
-            appearance.shadowImage = UIImage()
-            navigationBar.standardAppearance = appearance
-            navigationBar.scrollEdgeAppearance = navigationBar.standardAppearance
-        }
     }
 }
 
