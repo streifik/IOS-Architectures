@@ -238,14 +238,13 @@ class ProductDetailViewController: UIViewController {
         }
     }
     
-    
     func setUpConstraints() {
         // ScrollView
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -125)
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: addToCartStackView.isHidden ? 0 : -125)
         ])
         
         // ContentView
