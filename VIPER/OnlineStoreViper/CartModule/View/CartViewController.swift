@@ -32,7 +32,7 @@ class CartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         presenter?.viewLoaded()
-        navigationItem.title = "Products"
+        navigationItem.title = "Cart"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -50,7 +50,6 @@ class CartViewController: UIViewController {
     
     func initialize() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Cart"
         setupMessageLabel()
         view.addSubview(cartTableView)
         view.addSubview(messageLabel)
@@ -98,7 +97,6 @@ class CartViewController: UIViewController {
     
     func setUpUI() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Cart"
     }
     func setupTableView() {
         cartTableView.delegate = self
