@@ -20,8 +20,8 @@ class ProductsViewModel: ObservableObject {
     let apiService = APIService(networkService: NetworkService())
     
     func fetchProductsCombine() {
-        self.isLoading = true
-        self.error = nil
+        isLoading = true
+        error = nil
         
         apiService.getProducts()
             .sink { completion in
@@ -49,8 +49,7 @@ class ProductsViewModel: ObservableObject {
     }
     
     func fetchProductsByCategoryCombine(category: String) {
-        self.isLoading = true
-        
+        isLoading = true
         apiService.getProductsByCategory(category: category)
             .sink { completion in
                 switch completion {

@@ -56,9 +56,10 @@ struct ProductsView: View {
                     .background(Color.white)
                     .cornerRadius(10)
                 }
-                    .padding([.leading, .trailing, .bottom], 30)
-                    .frame(maxHeight: 80)
-                    .background(Color(uiColor: UIColor.secondarySystemBackground))
+                .padding([.leading, .trailing, .bottom], 30)
+                .frame(maxHeight: 80)
+                .background(Color(uiColor: UIColor.secondarySystemBackground))
+                
                 List(productsViewModel.products) {
                     product in
                     HStack {
@@ -75,37 +76,37 @@ struct ProductsView: View {
                         .frame(maxWidth: .infinity).edgesIgnoringSafeArea(.all)
                         .listRowInsets(EdgeInsets())
                         .background(Color.init(uiColor: UIColor.secondarySystemBackground))
-                }   .listStyle(PlainListStyle())
-                    .frame(maxWidth: .infinity).edgesIgnoringSafeArea(.all)
-                    .scrollContentBackground(.hidden)
-                    .background(Color.init(uiColor: UIColor.secondarySystemBackground))
-                    .blur(radius: isPressed ? 20 : 0)
-                    .overlay {
-                        if productsViewModel.isLoading {
-                            ProgressView("Loading")
-                        }
+               }.listStyle(PlainListStyle())
+                .frame(maxWidth: .infinity).edgesIgnoringSafeArea(.all)
+                .scrollContentBackground(.hidden)
+                .background(Color.init(uiColor: UIColor.secondarySystemBackground))
+                .blur(radius: isPressed ? 20 : 0)
+                .overlay {
+                    if productsViewModel.isLoading {
+                        ProgressView("Loading")
                     }
-                    .navigationBarTitle("Products", displayMode: .automatic)
-                    .onAppear {
-                        productsViewModel.fetchProductsCombine()
-                        tabbBarHidden = false
+                }
+                .navigationBarTitle("Products", displayMode: .automatic)
+                .onAppear {
+                    productsViewModel.fetchProductsCombine()
+                    tabbBarHidden = false
                 }
             }
-                .frame(maxWidth: .infinity)
-                .onReceive(productsViewModel.$error) { newError in
-                    if newError != nil {
-                        self.isShowingAlert = true
-                    }
-                    else {
-                        self.isShowingAlert = false
-                    }
+            .frame(maxWidth: .infinity)
+            .onReceive(productsViewModel.$error) { newError in
+                if newError != nil {
+                    self.isShowingAlert = true
                 }
-                .alert(productsViewModel.errorMessage(for: productsViewModel.error ?? .networkError), isPresented: $isShowingAlert) {
-                    Button("OK", role: .cancel) {
-                        isShowingAlert = false
+                else {
+                    self.isShowingAlert = false
                 }
             }
-        }
+            .alert(productsViewModel.errorMessage(for: productsViewModel.error ?? .networkError), isPresented: $isShowingAlert) {
+                Button("OK", role: .cancel) {
+                    isShowingAlert = false
+                }
+            }
+        }.background(Color.init(uiColor: UIColor.secondarySystemBackground))
     }
     
     // MARK: Methods
@@ -144,9 +145,9 @@ struct ProductListRow: View {
                 }.padding([.leading, .trailing], 21 )
             }
         }.padding(.vertical, 20)
-            .frame(maxWidth: .infinity).edgesIgnoringSafeArea(.all)
-            .background(Color.white)
-            .cornerRadius(10)
+         .frame(maxWidth: .infinity).edgesIgnoringSafeArea(.all)
+         .background(Color.white)
+         .cornerRadius(10)
     }
 }
 

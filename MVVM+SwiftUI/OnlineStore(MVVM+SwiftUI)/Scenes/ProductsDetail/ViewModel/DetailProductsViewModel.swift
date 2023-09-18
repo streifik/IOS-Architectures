@@ -36,7 +36,7 @@ class DetailProductsViewModel: ObservableObject {
             // change quantity if product exist in cart
             cartProduct.quantity = Int64(newQuantity)
             CoreDataManager.shared.saveContext()
-
+            
             if cartProduct.quantity == 0 {
                 // delete product from cart when quantity equals 0
                 let deletionSuccess = CoreDataManager.shared.deleteProductFromCart(product: cartProduct)
