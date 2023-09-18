@@ -11,7 +11,7 @@ Includes  MVP, MVVM+Boxing, MVVM+Delegates, MVVM+SwiftUI+Combine, VIPER
 
 
 # MVVM+Coordinator(Boxing)
-
+![MVVM](Images/1*uhPpTHYzTmHGrAZy8hiM7w.webp)
 UI: Storyboard \
 Data binding: Boxing \
 Navigation: Coordinator 
@@ -27,13 +27,13 @@ UI: SwiftUI
 Data binding: SwiftUI property wrappers
 
 # MVP+Router+DI 
+![MVP](Images/1*hKUCPEHg6TDz6gtOlnFYwQ.webp)
 UI: XIBS \
 Navigation: Router \
-DI \
-Protocol oriented 
+Dependency Injection (DI) is implemented through the AssemblyBuilder \
 
 # VIPER
-
+![VIPER](Images/1*0pN3BNTXfwKbf08lhwutag.webp)
 UI: Programmatically
 
 
