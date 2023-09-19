@@ -3,10 +3,10 @@
 iOS project implemented using different architectures <br>
 Includes  MVP, MVVM+Boxing, MVVM+Delegates, MVVM+SwiftUI+Combine, VIPER
 
-## About 
+# About 
 The sample project is an e-commerce app that includes working with the API, storing and processing data in Core Data and error handling
 
-## API 
+# API 
 
 [FakeStoreAPI](https://fakestoreapi.com)
 
