@@ -1,6 +1,6 @@
 # IOS-Architectures
 
-iOS project implemented using different architectures <br>
+Sample iOS project implemented using different architectures <br>
 Includes  MVP, MVVM+Boxing, MVVM+Delegates, MVVM+SwiftUI+Combine, VIPER
 
 # About 
